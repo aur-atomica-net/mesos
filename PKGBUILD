@@ -10,7 +10,7 @@ url='http://mesos.apache.org/'
 license=('Apache')
 install='mesos.install'
 depends=('libnl>=3.2.26')
-makedepends=('apr')
+makedepends=('java-environment' 'apr' 'subversion' 'maven' 'python2')
 source=("http://www.apache.org/dist/mesos/${pkgver}/mesos-${pkgver}.tar.gz"
         "mesos-master.service"
         "mesos-slave.service"
