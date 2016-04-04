@@ -10,6 +10,7 @@ url="http://mesos.apache.org/"
 license=('Apache')
 install="mesos.install"
 depends=('libnl>=3.2.26')
+makedepends=(apr')
 # depends=('python2' 'curl' 'leveldb' 'java-environment' 'libunwind' 'google-glog'
 #          'libnl>=3.2.26' 'apr' 'subversion' 'protobuf' 'python2-protobuf' 'python2-boto')
 # makedepends=('java-environment' 'maven' 'http-parser' 'python2-http-parser' 'google-glog'
