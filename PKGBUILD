@@ -20,8 +20,8 @@ source=("http://www.apache.org/dist/mesos/${pkgver}/mesos-${pkgver}.tar.gz"
         "mesos.install")
 
 sha256sums=('7e4183ada965ac8a1345ef71cd284c9c2834ac57fe4c0794fdf1ea5bb291b615'
-            'f3f38de7b48dec5e522346be8772d570b54a04fdbb42f9282cbe4e991ce3dc37'
-            '324edaf1c60774f4d3a651e1df918b3296647b767d065aadfaf7660b1d00f06e'
+            'c3b2abf33e80a779f4773cc6a73c3d29d840f0827b887b9d5bd5df4c05ea8738'
+            'ddfea9851177e22f06fa98fc5704e4c14ef284f2c5b4c9e53d01ff6a49febd5d'
             'fcb525b58905ce8f91bde7c8bcd2f9246bbab3e06b4fc208752d41f6d68a34f6')
 
 prepare() {
@@ -36,8 +36,8 @@ build() {
 
   ../configure \
     --prefix=/usr \
-    --libexecdir=/usr/lib \
     --sbindir=/usr/bin \
+    --sysconfdir=/etc \
     --with-network-isolator
 
   make
@@ -52,7 +52,8 @@ package() {
   cd ${srcdir}/mesos-${pkgver}/build
 	make DESTDIR="${pkgdir}/" install
 
-  mkdir -p -m755 ${pkgdir}/var/{lib,log}/${pkgname}
+  mkdir -p -m755 ${pkgdir}/var/log/${pkgname}
+  mkdir -p -m755 ${pkgdir}/var/lib/${pkgname}/{master,slave}
 
   mkdir -p -m755 ${pkgdir}/usr/lib/systemd/system
   install -m644 ${srcdir}/${pkgname}-{master,slave}.service ${pkgdir}/usr/lib/systemd/system
