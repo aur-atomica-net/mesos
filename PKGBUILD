@@ -20,7 +20,7 @@ source=("http://www.apache.org/dist/mesos/${pkgver}/mesos-${pkgver}.tar.gz"
         "mesos.install")
 
 sha256sums=('7e4183ada965ac8a1345ef71cd284c9c2834ac57fe4c0794fdf1ea5bb291b615'
-            'c3b2abf33e80a779f4773cc6a73c3d29d840f0827b887b9d5bd5df4c05ea8738'
+            'e6bee061ad26dcae87ea584dc970c1c682d3104648de08c8933a6cd19b3a0413'
             'ddfea9851177e22f06fa98fc5704e4c14ef284f2c5b4c9e53d01ff6a49febd5d'
             'fcb525b58905ce8f91bde7c8bcd2f9246bbab3e06b4fc208752d41f6d68a34f6')
 
