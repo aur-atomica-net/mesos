@@ -6,12 +6,13 @@ Wants=network.target
 
 [Service]
 EnvironmentFile=-/etc/mesos/mesos-slave-env.sh
-ExecStart=/usr/bin/mesos-slave --master=127.0.0.1:5050 --work_dir=/var/lib/mesos/slave
+ExecStart=/usr/bin/mesos-slave --master=127.0.0.1:5050
 ExecStop=/usr/bin/killall -s 9 mesos-slave
 ExecReload=/usr/bin/kill -HUP $MAINPID
 Restart=always
 RestartSec=20
 LimitNOFILE=16384
+PrivateTmp=yes
 
 [Install]
 WantedBy=multi-user.target

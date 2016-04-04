@@ -6,15 +6,11 @@ pkgver=0.28.0
 pkgrel=1
 pkgdesc="Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), enabling fault-tolerant and elastic distributed systems to easily be built and run effectively."
 arch=('i686' 'x86_64')
-url="http://mesos.apache.org/"
+url='http://mesos.apache.org/'
 license=('Apache')
-install="mesos.install"
+install='mesos.install'
 depends=('libnl>=3.2.26')
-makedepends=(apr')
-# depends=('python2' 'curl' 'leveldb' 'java-environment' 'libunwind' 'google-glog'
-#          'libnl>=3.2.26' 'apr' 'subversion' 'protobuf' 'python2-protobuf' 'python2-boto')
-# makedepends=('java-environment' 'maven' 'http-parser' 'python2-http-parser' 'google-glog'
-#              'gperftools' 'apr' 'subversion' 'protobuf' 'python2-protobuf' 'python2-boto')
+makedepends=('apr')
 source=("http://www.apache.org/dist/mesos/${pkgver}/mesos-${pkgver}.tar.gz"
         "mesos-master.service"
         "mesos-slave.service"
@@ -22,7 +18,7 @@ source=("http://www.apache.org/dist/mesos/${pkgver}/mesos-${pkgver}.tar.gz"
 
 sha256sums=('7e4183ada965ac8a1345ef71cd284c9c2834ac57fe4c0794fdf1ea5bb291b615'
             'e6bee061ad26dcae87ea584dc970c1c682d3104648de08c8933a6cd19b3a0413'
-            'ddfea9851177e22f06fa98fc5704e4c14ef284f2c5b4c9e53d01ff6a49febd5d'
+            '95f02fdbab6088a73f256c19988ae6c465370808cdaef832551d362ffb4c7ab4'
             'fcb525b58905ce8f91bde7c8bcd2f9246bbab3e06b4fc208752d41f6d68a34f6')
 
 prepare() {
